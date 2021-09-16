@@ -1,0 +1,12 @@
+Notes to the two folders:
+	1. the pointCloudGeneration folder is used for point cloud generation.
+	2. the ArmTroiSearch folder is used for arm tracking.
+
+Cite:
+	@inproceedings{liu2019real,
+  		title={Real-time arm skeleton tracking and gesture inference tolerant to missing wearable sensors},
+  		author={Liu, Yang and Li, Zhenjiang and Liu, Zhidan and Wu, Kaishun},
+  		booktitle={Proceedings of the 17th Annual International Conference on Mobile Systems, Applications, and Services},
+  		pages={287--299},
+  		year={2019}
+	}
