@@ -4,7 +4,8 @@ class Mk1(tf.keras.Model):
     def __init__(self):
         super(Mk1, self).__init__()
         self.rnn=tf.keras.layers.LSTM(3,return_sequences='true',activation='sigmoid')
-        self.dense1=tf.keras.layers.Dense(4,activation='sigmoid')
+        self.dense1=tf.keras.layers.Dense(3,activation='sigmoid')
+        self.rnn2=tf.keras.layers.LSTM(9,return_sequences='true',activation='sigmoid')
 
     def call(self,inputs):
         x1,x2,x3=tf.split(inputs,num_or_size_splits=3,axis=2)
@@ -18,7 +19,7 @@ class Mk1(tf.keras.Model):
         # print('*************************y2:',y2.get_shape)
         # print('******************************y3:',y3.get_shape)
         y4=tf.concat([y1,y2,y3],axis=2)
+        y5=self.rnn2(y4)
         # print('***********************************y4:',y4.get_shape)
-        y = self.dense1(y4)
-        # print('****************************************y:',y.get_shape)
+        y = self.dense1(y5)
         return y
