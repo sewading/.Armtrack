@@ -65,7 +65,7 @@ nn=Mk1()
 nn.compile(optimizer="sgd", loss='mse') 
 nn.load_weights(checkpoint_path)
 print('History model loaded from:',checkpoint_path)
-nn.fit(x,y_ori,epochs=200,callbacks=[cp_callback])
+nn.fit(x,y_ori,epochs=10,callbacks=[cp_callback])
 
 # nn.predict(xt)
 
